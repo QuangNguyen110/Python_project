@@ -1,18 +1,16 @@
-# Compound interest
+questions = ("What is The capital of Canada?",
+             "What is the square root of 144?",
+             "What is the fastest land animal?",
+             "What is the chemical symbol for Gold?",
+             "How many continents are there on Earth?")
 
-questions = ("Aa?",
-             "Bb?",
-             "Cc?",
-             "Dd?",
-             "Ee?")
+options = (("A. Toronto", "B. Vancouver", "C. Montreal", "D. Ottawa"),
+           ("A. 10", "B. 11", "C. 12", "D. 13"),
+           ("A. Cheetah", "B. Horse", "C. Ostrich", "D. Chameleon"),
+           ("A. Ag", "B. Au", "C. At", "D. Br"),
+           ("A. 6", "B. 7", "C. 8", "D. 9"))
 
-options = (("A. 110", "B. 220", "C. 330", "D. 440"),
-           ("A. 111", "B. 222", "C. 333", "D. 444"),
-           ("A. 112", "B. 223", "C. 334", "D. 445"),
-           ("A. 113", "B. 224", "C. 335", "D. 446"),
-           ("A. 1111", "B. 2222", "C. 3333", "D. 4444"))
-
-answer = ("C","A","B,","D","D")
+answer = ("D","C","A","B","B")
 guesses = []
 score = 0
 question_num = 0
@@ -31,5 +29,8 @@ for question in questions:
         print("INCORRECT!!")
     question_num += 1
 
+score = int(score / len(questions) * 100)
+
 print("------  RESULTS  -----")
 print(answer)
+print(f"Your score is : {score}%")
